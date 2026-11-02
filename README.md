@@ -1,24 +1,32 @@
 # Tic-Tac-Toe
 
-A small Flutter project and my first experience building a mobile app. Play the
-classic game locally with a friend or challenge the computer in single-player
-mode.
+A playful Tic-Tac-Toe app and my first mobile project built with Flutter.
+Challenge the computer or pass the phone and play with a friend.
 
 ## Features
 
-- Two-player mode on one device.
-- Single-player mode against a Minimax-based computer opponent.
-- Choose whether you or the computer makes the first move.
-- Winning squares are highlighted, with win and draw messages.
+- Play locally with a friend or take on the Minimax-powered Pixel Bot.
+- Choose who makes the first move in single-player mode.
+- Enjoy a colorful, responsive interface with animated game tiles.
+- See winning squares highlighted and get a result for each round.
 - Restart a game at any time.
 
-## Screenshots
+## Preview
 
 ![Three Tic-Tac-Toe app screens in phone mockups](screenshots/portfolio-mockup.png)
 
-Individual app screenshots: [welcome screen](screenshots/home.png) ·
-[starting-player selection](screenshots/choose-starting-player.png) ·
-[single-player game](screenshots/single-player-game.png).
+### Mobile demo
+
+[Watch the mobile gameplay demo](screenshots/mobile-demo.mp4).
+
+### Screenshots
+
+- [Choose a game mode](screenshots/home.png)
+- [Choose who starts](screenshots/choose-starting-player.png)
+- [Single-player board](screenshots/single-player-game.png)
+- [Playing against Pixel Bot](screenshots/single-player-move.png)
+- [Two-player board](screenshots/two-player-board.png)
+- [Winning a round](screenshots/game-result.png)
 
 ## Getting started
 
@@ -44,6 +52,7 @@ flutter analyze
 
 - [Flutter](https://flutter.dev/)
 - [Dart](https://dart.dev/)
+- Minimax algorithm for the computer opponent
 
 ## License
 
