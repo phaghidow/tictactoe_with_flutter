@@ -358,41 +358,57 @@ class _GameHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        _HeaderIconButton(
-          icon: Icons.arrow_back_rounded,
-          tooltip: 'Back to menu',
-          onPressed: onBack,
-        ),
-        const Spacer(),
-        Column(
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        return Row(
           children: [
-            Text(
-              'TIC TAC TOE',
-              style: Theme.of(context).textTheme.labelLarge?.copyWith(
-                fontWeight: FontWeight.w900,
-                letterSpacing: 1.4,
-              ),
+            _HeaderIconButton(
+              icon: Icons.arrow_back_rounded,
+              tooltip: 'Back to menu',
+              onPressed: onBack,
             ),
-            Text(
-              'MAKE YOUR MOVE',
-              style: Theme.of(context).textTheme.labelSmall?.copyWith(
-                color: GameColors.muted,
-                fontSize: 8,
-                fontWeight: FontWeight.w800,
-                letterSpacing: 1.5,
-              ),
+            const Spacer(),
+            Row(
+              children: [
+                if (constraints.maxWidth >= 310) ...[
+                  Image.asset(
+                    'assets/tictactoe-logo.png',
+                    width: 25,
+                    height: 25,
+                  ),
+                  const SizedBox(width: 6),
+                ],
+                Column(
+                  children: [
+                    Text(
+                      'TIC TAC TOE',
+                      style: Theme.of(context).textTheme.labelLarge?.copyWith(
+                        fontWeight: FontWeight.w900,
+                        letterSpacing: 1.4,
+                      ),
+                    ),
+                    Text(
+                      'MAKE YOUR MOVE',
+                      style: Theme.of(context).textTheme.labelSmall?.copyWith(
+                        color: GameColors.muted,
+                        fontSize: 8,
+                        fontWeight: FontWeight.w800,
+                        letterSpacing: 1.5,
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+            const Spacer(),
+            _HeaderIconButton(
+              icon: Icons.refresh_rounded,
+              tooltip: 'New game',
+              onPressed: onReset,
             ),
           ],
-        ),
-        const Spacer(),
-        _HeaderIconButton(
-          icon: Icons.refresh_rounded,
-          tooltip: 'New game',
-          onPressed: onReset,
-        ),
-      ],
+        );
+      },
     );
   }
 }

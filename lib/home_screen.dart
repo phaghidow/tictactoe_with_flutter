@@ -99,10 +99,11 @@ class _HomeHeader extends StatelessWidget {
                   ),
                 ],
               ),
-              child: const Icon(
-                Icons.grid_3x3_rounded,
-                color: Colors.white,
-                size: 25,
+              child: Image.asset(
+                'assets/tictactoe-logo.png',
+                width: 46,
+                height: 46,
+                fit: BoxFit.contain,
               ),
             ),
             const SizedBox(width: 12),
